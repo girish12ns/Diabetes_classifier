@@ -1,0 +1,18 @@
+artifacts_root: 'artifacts'
+
+data_ingestion:
+  root_dir: 'artifacts/data_ingestion'
+  source_dir: 'DATA BOOK\Data\DIABETES.csv'
+  train_dir: 'artifacts/data_ingestion/train.csv'
+  test_dir: 'artifacts/data_ingestion/test.csv'
+
+data_transformation :
+  root_dir: 'artifacts/data_transformation'
+  preprocessor_dir : 'artifacts/data_transformation/preprocessor.pkl'
+
+data_trainer: 
+  root_dir: 'artifacts/model_trainer'
+  model_dir : 'artifacts/model_trainer/model_trainer.pkl'
+
+
+
