@@ -14,5 +14,9 @@ data_trainer:
   root_dir: 'artifacts/model_trainer'
   model_dir : 'artifacts/model_trainer/model_trainer.pkl'
 
+Model_updation :
+  root_dir : 'artifacts/model_updation'
+  updated_model_dir : 'artifacts/model_updation/udpated_model.pkl'
+
 
 

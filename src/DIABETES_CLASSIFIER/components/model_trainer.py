@@ -8,7 +8,7 @@ from catboost import CatBoostClassifier
 from xgboost import XGBRFClassifier
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report,recall_score
 from sklearn.neighbors import KNeighborsClassifier
-from src.DIABETES_CLASSIFIER.utils.common import  model_prediction,save_model
+from src.DIABETES_CLASSIFIER.utils.common import  model_predictions,save_model
 
 
 class Model_trainer:
@@ -32,7 +32,7 @@ class Model_trainer:
         
 
         
-        model_list,r_score_list,score_list=model_prediction(models=models,x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test)
+        model_list,r_score_list,score_list=model_predictions(models=models,x_train=x_train,x_test=x_test,y_train=y_train,y_test=y_test)
         
         model_report={}
 

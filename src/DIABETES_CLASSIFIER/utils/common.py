@@ -74,7 +74,7 @@ except Exception as e:
     raise e
 
 try:
-    def model_prediction(models,x_train,x_test,y_train,y_test):
+    def model_predictions(models,x_train,x_test,y_train,y_test):
 
         r_score_list=[]
         model_list=[]
@@ -92,9 +92,19 @@ try:
             r_score_list.append(r_score)
             model_list.append(list(models.keys())[i])
             score_list.append(score)
-            return (model_list,r_score_list,score_list)
+        return (model_list,r_score_list,score_list)
 except Exception as e:
     raise e
+
+def load_model(file_path):
+    try:
+        with open(file_path, 'rb') as f:
+            content = dill.load(f)
+        return content
+    except dill.PicklingError as e:
+        raise e
+    
+
 
 
 
