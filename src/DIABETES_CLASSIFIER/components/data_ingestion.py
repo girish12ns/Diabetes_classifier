@@ -15,6 +15,9 @@ class Data_ingestion:
 
         df=pd.read_csv(self.config.source_dir)
 
+    
+        
+
         train_set,test_set=train_test_split(df,random_state=42,test_size=0.2)
 
         train_set.to_csv(self.config.train_dir,index=False,header=True)
