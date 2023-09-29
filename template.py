@@ -21,6 +21,7 @@ list_files=[
     "src/{}/Pipeline/__init__.py".format(name),
     "config/config.yaml",
     "params.yaml",
+    "dvc.yaml",
     "request.yaml",
     "setup.py",
     "research/trails.ipynd",

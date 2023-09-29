@@ -17,4 +17,5 @@ dill
 catboost
 xgboost
 imbalanced-learn
+gunicorn
 -e .

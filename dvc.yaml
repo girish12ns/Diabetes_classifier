@@ -1,0 +1,26 @@
+stages: 
+  data_ingestion :
+    cmd : python  src/DIABETES_CLASSIFIER/Pipeline/data_ingestion_pipeline.py
+    deps:
+     - src/DIABETES_CLASSIFIER/Pipeline/data_ingestion_pipeline.py
+     - config/config.yaml
+    outs :
+      - artifacts/data_ingestion/train.csv
+      - artifacts/data_ingestion/test.csv
+  data_transformation :
+    cmd : python  src/DIABETES_CLASSIFIER/Pipeline/data_transformationpipeline.py
+    deps :
+    - src/DIABETES_CLASSIFIER/Pipeline/data_transformationpipeline.py
+    - config/config.yaml
+    outs :
+     - artifacts/data_transformation/preprocessor.pkl
+     
+  data_trainer :
+    cmd : python  src/DIABETES_CLASSIFIER/Pipeline/model_trainerPipeline.py
+    deps :
+     - src/DIABETES_CLASSIFIER/Pipeline/model_trainerPipeline.py
+     - config/config.yaml
+     -
+    outs :
+     - artifacts/model_trainer/model_trainer.pkl
+
